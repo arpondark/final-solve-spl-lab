@@ -61,8 +61,8 @@ void addTrain(struct Train listOfTrains[], int *numOfTrains) {
     }
 
     printf("Enter train name: ");
-    fgets(listOfTrains[*numOfTrains].name, sizeof(listOfTrains[*numOfTrains].name), stdin);
-    listOfTrains[*numOfTrains].name[strcspn(listOfTrains[*numOfTrains].name, "\n")] = 0; // Remove newline character
+    scanf("%[^\n]%*c",listOfTrains[*numOfTrains].name);
+     // Remove newline character
 
     printf("Enter total tickets: ");
     scanf("%d", &listOfTrains[*numOfTrains].totalTickets);
